@@ -1,11 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ALTAY GAMES</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      width: 100%;
+      background: radial-gradient(circle at center, #111 0%, #000 100%);
+      font-family: 'Courier New', Courier, monospace;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      overflow: hidden;
+    }
+
+    .title {
+      font-size: 3em;
+      font-weight: 100;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 3px solid #fff;
+      width: 0;
+      animation: typing 3s steps(12) forwards, blink 0.7s step-end infinite;
+      margin-bottom: 40px;
+    }
+
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 12ch; }
+    }
+
+    @keyframes blink {
+      from, to { border-color: transparent; }
+      50% { border-color: white; }
+    }
+
+    .circle-container {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .glow-ring {
+      position: absolute;
+      top: -15px;
+      left: -15px;
+      width: 330px;
+      height: 330px;
+      border-radius: 50%;
+      border: 3px solid cyan;
+      box-shadow: 0 0 30px cyan;
+      animation: rotateRing 10s linear infinite;
+      z-index: 1;
+    }
+
+    @keyframes rotateRing {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    svg.logo {
+      width: 180px;
+      height: 180px;
+      z-index: 2;
+      transform: scaleX(-1) rotate(160deg);
+      transform-origin: center;
+      margin-left: -50px;
+    }
+
+    /* Çizim animasyonu için stroke-dasharray ve stroke-dashoffset ayarları JS ile yapılacak */
+    .logo path {
+      stroke: #111;
+      stroke-width: 25;
+      fill: none;
+      /* Başlangıçta path gizlenecek */
+      stroke-dasharray: 0;
+      stroke-dashoffset: 0;
+    }
+
+    @keyframes draw {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .circle-container {
+        width: 200px;
+        height: 200px;
+      }
+
+      .glow-ring {
+        width: 230px;
+        height: 230px;
+        top: -15px;
+        left: -15px;
+      }
+
+      svg.logo {
+        width: 160px;
+        height: 160px;
+        margin-left: -30px;
+      }
+
+      .title {
+        font-size: 1.8em;
+      }
+    }
+  </style>
 </head>
 <body>
-    <h1>Hello World</h1>
+  <div class="title">ALTAY GAMES</div>
+  <div class="circle-container">
+    <div class="glow-ring"></div>
+    <svg class="logo" viewBox="0 0 3000 3000" xmlns="http://www.w3.org/2000/svg">
+      <path d="M1875 2682 c-38 -41 -103 -100 -145 -131 -184 -136 -230 -190 -230 -267 0 -39 -8 -52 -87 -146 -190 -224 -302 -366 -308 -391 -4 -15 0 -39 10 -61 l17 -35 -67 -76 c-85 -98 -181 -245 -239 -366 -79 -162 -72 -196 30 -146 63 31 62 31 61 15 -2 -64 18 -88 74 -88 104 0 296 68 348 124 l24 26 -27 21 c-39 30 -49 63 -32 102 21 49 124 175 158 193 32 16 195 22 209 7 7 -8 -53 -230 -73 -270 -14 -28 -60 -47 -93 -39 -35 9 -31 -6 10 -42 55 -49 137 -64 234 -41 97 22 124 67 201 330 148 501 155 521 216 589 54 59 112 84 186 77 74 -7 94 -22 41 -30 -21 -4 -53 -16 -70 -27 l-33 -20 64 -65 c71 -73 169 -237 108 -182 -46 42 -198 91 -243 80 -16 -5 -7 -18 59 -87 151 -157 290 -350 342 -474 l28 -65 10 50 c26 119 24 234 -3 306 -12 28 10 20 93 -37 l79 -54 -13 72 c-29 150 -84 300 -140 379 -19 26 -28 47 -21 47 6 0 40 -13 75 -30 35 -17 62 -24 62 -18 0 6 -18 48 -40 94 -46 96 -129 187 -215 235 -30 17 -55 33 -55 36 0 3 32 3 70 0 65 -5 69 -5 61 12 -6 10 -40 46 -76 79 -115 108 -232 152 -403 152 l-99 0 -6 -30 c-12 -57 -120 -150 -175 -150 -14 0 -9 10 26 46 24 26 54 67 65 93 25 57 32 160 15 227 l-13 52 -70 -76z m211 -467 c27 -8 63 -26 79 -39 l30 -25 -50 15 c-74 23 -219 14 -315 -19 l-75 -26 43 39 c74 67 181 87 288 55z m-635 -311 c-21 -32 -48 -85 -58 -116 -13 -37 -30 -65 -49 -80 -16 -12 -55 -44 -86 -71 -32 -27 -58 -45 -58 -40 0 12 67 121 103 168 47 61 179 206 183 202 3 -2 -13 -31 -35 -63z m338 -56 c-12 -29 -29 -73 -38 -98 l-17 -45 -78 -3 -78 -3 23 33 c55 82 157 166 201 168 4 0 -2 -24 -13 -52z" />
+      <path d="M1286 2234 c-32 -33 -54 -100 -38 -116 8 -8 22 -1 52 29 32 33 40 48 40 77 0 44 -17 47 -54 10z" />
+      <path d="M976 1609 c-30 -35 -43 -76 -29 -90 14 -14 97 86 89 106 -9 24 -32 18 -60 -16z" />
+      <path d="M2085 1488 c-15 -62 -30 -120 -32 -128 -3 -8 9 0 25 18 l29 32 82 -71 c94 -82 214 -215 277 -309 l44 -65 0 53 c0 84 -28 200 -68 282 -42 87 -154 205 -242 257 -90 53 -83 57 -115 -69z" />
+    </svg>
+  </div>
+
+  <script>
+    window.addEventListener('load', () => {
+      const paths = document.querySelectorAll('.logo path');
+
+      paths.forEach((path, i) => {
+        const length = path.getTotalLength();
+
+        // Her path'i gizlemek için stroke-dasharray ve stroke-dashoffset path uzunluğuna eşitlenir
+        path.style.strokeDasharray = length;
+        path.style.strokeDashoffset = length;
+
+        // Animasyon süresi path uzunluğuna göre ayarlanıyor (örnek 0.01 saniye / pixel)
+        const duration = length / 1000;
+
+        // Animasyonu uygula
+        path.style.animation = `draw ${duration}s ease forwards`;
+        // Her path biraz gecikmeli başlasın ki sıralı çizilsin
+        path.style.animationDelay = `${i * 0.3}s`;
+      });
+    });
+  </script>
 </body>
 </html>

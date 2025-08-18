@@ -120,51 +120,54 @@
 <!-- About & Games Section'dan sonra ekleyin -->
 <!-- Update your contact section with this structure -->
   <section id="Contact" class="contact-section">
-        <div class="contact-container">
-            <h2 class="contact-title">Contact <span class="fancy2">Us</span></h2>
-            
-            <div class="contact-content">
-                <!-- Left Side: Contact Form -->
-                <div class="contact-form">
-                    <form action="#" method="POST">
-                        <div class="form-group">
-                            <input type="text" name="name" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" name="email" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea name="message" placeholder="Your Message" required></textarea>
-                        </div>
-                        <button type="submit" class="submit-btn">Send Message</button>
-                    </form>
-                </div>
-                
-                <!-- Right Side: Only Image -->
-                <div class="contact-image-container">
-                    <img src="Imgs/contac.png" alt="Contact Illustration" class="contact-image">
-                </div>
+    <div class="contact-container">
+        <h2 class="contact-title">Contact <span class="fancy2">Us</span></h2>
+        
+        <div class="contact-content">
+            <!-- Left Side: Contact Form -->
+            <div class="contact-form">
+                <form action="https://formspree.io/f/mwpqjdal" method="POST">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Your Message" required></textarea>
+                    </div>
+                    
+                    <!-- Formspree Gizli Alanlar -->
+                    <input type="hidden" name="_subject" value="Altay Games - New Contact Form Message">
+                    <input type="hidden" name="_language" value="en">
+                    <input type="text" name="_gotcha" style="display:none">
+                    
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
             </div>
             
-            <!-- Contact Info Below -->
-            <div class="contact-info-container">
-                
-                    
-                    <div class="social-links">
-                        <a href="https://x.com/AltayGames" target="_blank" class="social-icon">
-                            <img src="https://cdn-icons-png.flaticon.com/512/124/124021.png" alt="Twitter">
-                        </a>
-                        <a href="https://www.instagram.com/altaygames/" target="_blank" class="social-icon">
-                            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
-                        </a>
-                        <a href="https://discord.com/" target="_blank" id="dc" class="social-icon">
-                            <img src="https://cdn-icons-png.flaticon.com/512/906/906361.png" alt="Discord">
-                        </a>
-                    </div>
-                </div>
+            <!-- Right Side: Only Image -->
+            <div class="contact-image-container">
+                <img src="Imgs/contac.png" alt="Contact Illustration" class="contact-image">
             </div>
         </div>
-    </section>
+        
+        <!-- Contact Info Below -->
+        <div class="contact-info-container">
+            <div class="social-links">
+                <a href="https://x.com/AltayGames" target="_blank" class="social-icon">
+                    <img src="https://cdn-icons-png.flaticon.com/512/124/124021.png" alt="Twitter">
+                </a>
+                <a href="https://www.instagram.com/altaygames/" target="_blank" class="social-icon">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+                </a>
+                <a href="https://discord.com/" target="_blank" id="dc" class="social-icon">
+                    <img src="https://cdn-icons-png.flaticon.com/512/906/906361.png" alt="Discord">
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
 
     <footer>
         <p>&copy; 2023 Altay Games. All rights reserved.</p>

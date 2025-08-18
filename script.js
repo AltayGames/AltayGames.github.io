@@ -71,3 +71,42 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+//form 
+document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.querySelector('.contact-form form');
+    
+    if (contactForm) {
+        contactForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            
+            // Yükleme animasyonu
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = 'Sending...';
+            
+            try {
+                const response = await fetch(this.action, {
+                    method: 'POST',
+                    body: new FormData(this),
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    alert('Your message has been sent successfully. We will get back to you soon.');
+                    this.reset();
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            } catch (error) {
+                alert('An error occurred while sending your message: ' + error.message);
+                console.error('Form submission error:', error);
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalText;
+            }
+        });
+    }
+});

@@ -3,8 +3,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const body = document.body;
 
     // Mevcut tema kontrolü
-    const currentTheme = localStorage.getItem('theme') || 
-                       (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    const currentTheme = localStorage.getItem('theme') || 'dark';
+body.classList.add(currentTheme + '-theme');
+updateThemeIcon();
     
     body.classList.add(currentTheme + '-theme');
     updateThemeIcon();

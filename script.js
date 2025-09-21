@@ -2,11 +2,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const themeToggle = document.querySelector('.theme-toggle');
     const body = document.body;
 
-    // Mevcut tema kontrolü
+    // Default tema dark
     const currentTheme = localStorage.getItem('theme') || 'dark';
-body.classList.add(currentTheme + '-theme');
-updateThemeIcon();
-    
     body.classList.add(currentTheme + '-theme');
     updateThemeIcon();
 
@@ -36,10 +33,10 @@ updateThemeIcon();
     // İkon güncelleme fonksiyonu
     function updateThemeIcon() {
         if (body.classList.contains('dark-theme')) {
-            themeToggle.innerHTML = '&#9788;'; // Güneş (light mode'a geç)
+            themeToggle.innerHTML = '&#9788;'; // Güneş
             themeToggle.style.background = 'linear-gradient(45deg, #ff6b6b, #cc5de8)';
         } else {
-            themeToggle.innerHTML = '&#9790;'; // Ay (dark mode'a geç)
+            themeToggle.innerHTML = '&#9790;'; // Ay
             themeToggle.style.background = 'linear-gradient(45deg, #339af0, #20c997)';
         }
     }
@@ -71,18 +68,14 @@ updateThemeIcon();
             }
         });
     });
-});
-//form 
-document.addEventListener('DOMContentLoaded', function() {
+
+    // Form gönderimi
     const contactForm = document.querySelector('.contact-form form');
-    
     if (contactForm) {
         contactForm.addEventListener('submit', async function(e) {
             e.preventDefault();
             const submitBtn = this.querySelector('button[type="submit"]');
             const originalText = submitBtn.innerHTML;
-            
-            // Yükleme animasyonu
             submitBtn.disabled = true;
             submitBtn.innerHTML = 'Sending...';
             
@@ -90,9 +83,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const response = await fetch(this.action, {
                     method: 'POST',
                     body: new FormData(this),
-                    headers: {
-                        'Accept': 'application/json'
-                    }
+                    headers: { 'Accept': 'application/json' }
                 });
                 
                 if (response.ok) {

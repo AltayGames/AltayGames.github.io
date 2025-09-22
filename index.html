@@ -3,26 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Altay Games</title>
-  <meta name="description" content="Altay Games is an advanced game studio founded by two university students. Explore our independent game projects and learn more about our team.">
 
-  <!-- Preconnect Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Başlık -->
+  <title>Altay Games - Indie Game Studio</title>
 
-  <!-- Google Fonts preload -->
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  </noscript>
+  <!-- Meta Description (SEO) -->
+  <meta name="description" content="Altay Games is an indie game studio founded by two university students. Explore our independent projects and unique gaming experiences.">
 
-  <!-- Style.css preload -->
-  <link rel="preload" href="Style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="Style.css"></noscript>
+  <!-- Ek SEO Meta -->
+  <meta name="keywords" content="Altay Games, indie games, game studio, university students, independent projects, Somnia, Ball Fight, Dungeon Tycoon">
+  <meta name="author" content="Altay Games Team">
 
-  <!-- Önerilen: kritik CSS’i küçük inline olarak buraya ekleyebilirsin (ör: body font ve header) -->
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://altaygames.github.io/">
+  <meta property="og:title" content="Altay Games - Indie Game Studio">
+  <meta property="og:description" content="Altay Games is an indie game studio founded by two university students. Explore our independent projects and unique gaming experiences.">
+  <meta property="og:image" content="Imgs/logo.webp">
 
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://altaygames.github.io/">
+  <meta name="twitter:title" content="Altay Games - Indie Game Studio">
+  <meta name="twitter:description" content="Altay Games is an indie game studio founded by two university students. Explore our independent projects and unique gaming experiences.">
+  <meta name="twitter:image" content="Imgs/logo.webp">
+
+  <!-- Favicon (tarayıcı simgesi) -->
+  <link rel="icon" href="Imgs/logo.webp" type="image/x-icon">
+
+  <!-- Ana CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header>
         <h1 class="Logo"><span class="fancy2">Altay</span> Games</h1>
@@ -40,13 +52,13 @@
         <div class="header-actions">
     <div class="social-links2">
          <a href="https://x.com/AltayGames" target="_blank" class="social-icon">
-                            <img fetchpriority="high" src="Imgs/Tw.webp" alt="Twitter">
+                            <img width="40" height="40"style="aspect-ratio: 1; object-fit: cover;" fetchpriority="high" src="Imgs/Tw.webp" alt="Twitter">
                         </a>
                         <a href="https://www.instagram.com/altaygames/" target="_blank" class="social-icon">
-                            <img fetchpriority="high" src="Imgs/Ig.webp" alt="Instagram">
+                          <img width="40" height="40"style="aspect-ratio: 1; object-fit: cover;"  fetchpriority="high" src="Imgs/Ig.webp" alt="Instagram">
                         </a>
                         <a href="https://discord.com/" target="_blank" id="dc" class="social-icon">
-                            <img fetchpriority="high" src="Imgs/Dc.webp" alt="Discord">
+                           <img width="40" height="40"style="aspect-ratio: 1; object-fit: cover;" fetchpriority="high" src="Imgs/Dc.webp" alt="Discord">
                         </a>
     <button class="theme-toggle" title="Tema Değiştir">&#9788;</button>
 
@@ -62,7 +74,11 @@
         
 
          <div class="hero-image-wrapper">
-        <img width="570" height="380" fetchpriority="high"  src="Imgs/homeh.webp" alt="Altay Games">
+        <img src="Imgs/homeh.webp" alt="Altay Games"
+     width="600" height="400"
+     loading="lazy"
+     style="aspect-ratio: 3/2; object-fit: cover;">
+
     </div>
 
     </div>
@@ -90,7 +106,9 @@
                     </div>
                 </div>
                 <div class="about-image">
-                    <img loading="lazy" src="Imgs/teamh.webp" alt="Altay Games Team">
+                    <img width="300" height="300"
+     loading="lazy"
+     style="aspect-ratio: 1; object-fit: cover;" src="Imgs/teamh.webp" alt="Altay Games Team">
                 </div>
             </div>
         </div>
@@ -102,7 +120,7 @@
             <!-- Game 1 -->
             <div class="game-card">
                 <div class="game-image-wrapper">
-                    <img loading="lazy" src="Imgs/somn.webp" alt="Game 1" class="game-image">
+                     <img width="200" height="200"style="aspect-ratio: 1; object-fit: cover;" loading="lazy" src="Imgs/somn.webp" alt="Game 1" class="game-image">
                 </div>
                 <h3 class="game-name">Somnia</h3>
                 <p class="game-desc">Embark on an unforgettable journey through mystical lands.</p>
@@ -112,7 +130,7 @@
             <!-- Game 2 -->
             <div class="game-card">
                 <div class="game-image-wrapper">
-                    <img loading="lazy" src="Imgs/ballf.webp" alt="Game 2" class="game-image">
+                   <img width="200" height="200"style="aspect-ratio: 1; object-fit: cover;" loading="lazy" src="Imgs/ballf.webp" alt="Game 2" class="game-image">
                 </div>
                 <h3 class="game-name">Ball Fight</h3>
                 <p class="game-desc">Explore the cosmos in this thrilling space exploration game.</p>
@@ -122,7 +140,7 @@
             <!-- Game 3 -->
             <div class="game-card">
                 <div class="game-image-wrapper">
-                    <img loading="lazy" src="Imgs/dungt.webp" alt="Game 3" class="game-image">
+                <img width="200" height="200"style="aspect-ratio: 1; object-fit: cover;" loading="lazy" src="Imgs/dungt.webp" alt="Game 3" class="game-image">
                 </div>
                 <h3 class="game-name">Dungeon Tycon</h3>
                 <p class="game-desc">Futuristic battles in a neon-lit cyberpunk world.</p>
@@ -162,7 +180,7 @@
             
             <!-- Right Side: Only Image -->
             <div class="contact-image-container">
-                <img src="Imgs/contac.webp" loading="lazy" alt="Contact Illustration" class="contact-image">
+                <img width="500" height="500"style="aspect-ratio: 1; object-fit: cover;" loading="lazy" src="Imgs/contac.webp" loading="lazy" alt="Contact Illustration" class="contact-image">
             </div>
         </div>
         
@@ -170,13 +188,13 @@
         <div class="contact-info-container">
             <div class="social-links">
                 <a href="https://x.com/AltayGames" target="_blank" class="social-icon">
-                    <img fetchpriority="high" src="Imgs/Tw.webp" alt="Twitter">
+                      <img width="40" height="40"style="aspect-ratio: 1; object-fit: cover;" loading="lazy" src="Imgs/Tw.webp" alt="Twitter">
                 </a>
                 <a href="https://www.instagram.com/altaygames/" target="_blank" class="social-icon">
-                    <img fetchpriority="high" src="Imgs/Ig.webp" alt="Instagram">
+                                     <img width="40" height="40"style="aspect-ratio: 1; object-fit: cover;" loading="lazy" src="Imgs/Ig.webp" alt="Instagram">
                 </a>
                 <a href="https://discord.com/" target="_blank" id="dc" class="social-icon">
-                    <img fetchpriority="high" src="Imgs/Dc.webp" alt="Discord">
+                                      <img width="40" height="40"style="aspect-ratio: 1; object-fit: cover;" loading="lazy" src="Imgs/Dc.webp" alt="Discord">
                 </a>
             </div>
         </div>
